@@ -13,7 +13,7 @@ form.addEventListener("submit", (event) => {
   if (value == "") {
     alert("please enter a value");
   } else {
-    fetch("http://localhost:3000/weather?address=" + value).then((response) => {
+    fetch("/weather?address=" + value).then((response) => {
       response.json().then((data) => {
         if (data.error) {
           msg1.textContent = data.error;
